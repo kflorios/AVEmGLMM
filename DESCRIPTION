@@ -1,0 +1,11 @@
+Package: AVEmGLMM
+Type: Package
+Title: Pairwise likelihood methods for multivariate GLMMs
+Version: 0.1
+Date: 2015-05-31
+Author: Kostas Florios <cflorios@aueb.gr>
+Maintainer: Kostas Florios <cflorios@aueb.gr>
+Description: Pairwise likelihood methods for multivariate generalized linear mixed models
+Depends: R (>= 3.0.1)
+License: MIT
+LazyData: true
