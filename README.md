@@ -8,5 +8,7 @@ Florios, K., Moustaki, I., Rizopoulos, D., Vasdekis, V.G.S., A modified weighted
 
 # Install
 install.packages("devtools")  
+
 require(devtools)
+
 install_github("kflorios/AVEmGLMM")
