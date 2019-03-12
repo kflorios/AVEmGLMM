@@ -35,8 +35,11 @@ estimateModelFit <- function(Data,Q,n) {
       #                     data = DD, family = binomial, nAGQ=3, verbose=T, control=list(maxIter=500, maxFN=1500))     #Florios
       ##Models[[i]] <- glmer(y ~ 0 + outcome + outcome:(time) + ( 0 + outcome + outcome:time | id ), 
       ##                     data = DD, family = binomial(logit), nAGQ=3, verbose=T, control=list(maxIter=500, maxFN=1500))     #Florios
+      ###Models[[i]] <- glmer(y ~ 0 + outcome + outcome:(time) + ( 0 + outcome + outcome:time  | id ), 
+      ###                     data = DD, family = binomial(logit), nAGQ=1, verbose=T, control=glmerControl(optCtr=list(maxfun=1000)))     #Florios
       Models[[i]] <- glmer(y ~ 0 + outcome + outcome:(time) + ( 0 + outcome + outcome:time  | id ), 
-                           data = DD, family = binomial(logit), nAGQ=1, verbose=T, control=glmerControl(optCtr=list(maxfun=1000)))     #Florios
+                           data = DD, family = binomial(logit), nAGQ=1, verbose=2, 
+                           control=glmerControl(optimizer="Nelder_Mead"))     #Florios
       
       cp<-i
       #1
